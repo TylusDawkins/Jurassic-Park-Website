@@ -1,0 +1,21 @@
+.main{
+    background-color:rgba(40, 204, 40, 0.527);
+}
+nav{
+    display:flex;
+    background-color:aquamarine;
+}
+#logo{
+    width:100px;
+    height:100px;
+    cursor: pointer;
+}
+#navbar{
+    display: inline;
+    list-style-type: none;
+    cursor: pointer;
+}
+.body{
+    display: flex;
+    justify-content: center;
+}
