@@ -1,6 +1,5 @@
 const { Router } = require('express');
 const controllers = require('../controllers')
-const seed = require('../seed/dinos')
 const router = Router();
 
 router.get('/', (req, res) => res.send('This is Jurassic Park!'))
@@ -18,7 +17,5 @@ router.get('/tickets', controllers.getTicketPrices)
 router.get('/staff', controllers.getAllStaff)
 
 router.post('/users', controllers.createUser)
-
-router.get('/dinoseed', seed)
 
 module.exports = router;
