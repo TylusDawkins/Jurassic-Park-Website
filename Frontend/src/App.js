@@ -1,10 +1,14 @@
 import './App.css';
 import { useState, useEffect } from 'react'
+import { Route, Routes, useNavigate } from 'react-router-dom'
 import Home from './components/Home'
 import JoinForm from './components/JoinForm';
 import Attractions from './components/Attractions';
 import DinoDeets from './components/DinoDeets';
-import Dinos from './components/DinoList'
+import DinoList from './components/DinoList'
+import AboutUs from './components/AboutUs';
+import Nav from './components/Nav';
+
 
 function App() {
   const [page, setPage] = useState(<Home/>)
@@ -24,7 +28,7 @@ function App() {
     console.log("You are now at the Attractions page")
   }
   const goDinos = () =>{
-    setPage(<Dinos/>)
+    setPage(<DinoList/>)
     console.log('You are now at the Dinos page!')
   }
   const goDinoDeets = () =>{
@@ -71,3 +75,25 @@ function App() {
 }
 
 export default App;
+
+// return (
+//   <div className="App">
+//     <header>
+//       <Nav />
+//     </header>
+//     <main>
+//       <Routes>
+//         <Route path='/' element={ <Home /> } />
+//         <Route path='/aboutus' element={ <AboutUs /> } />
+//         <Route path='/attractions' element={ <Attractions />} />
+//         <Route path="/dinosaurs" element={ <DinoList dinos={dinos} />} />
+//         <Route path="/dinosaurs/:id" element={ <DinoDeets dinos={dinos} />} />
+//         <Route path='/joinform' element={ <JoinForm 
+//       newUser={newUser}
+//       handleChange={handleChange}
+//       addUser={addUser}/>} />
+//       </Routes>
+//     </main>
+//   </div>
+// )
+// }

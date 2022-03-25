@@ -1,12 +1,12 @@
 import React from "react"
 
-const Home = () => {
+const AboutUs = () => {
 
     return (
         <div> 
-            <img src='https://s.hdnux.com/photos/60/64/06/12796320/3/1200x0.jpg' alt="People stand in front of a Dino" id="homeIMG"/>
+            <p>About us</p>
         </div>
         )
 }
 
-export default Home
+export default AboutUs
