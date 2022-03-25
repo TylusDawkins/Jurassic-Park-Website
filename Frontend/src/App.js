@@ -8,6 +8,9 @@ import DinoDeets from './components/DinoDeets';
 import DinoList from './components/DinoList'
 import AboutUs from './components/AboutUs';
 import Nav from './components/Nav';
+import Axios from 'axios'
+
+
 
 
 function App() {
@@ -27,6 +30,12 @@ function App() {
       setNewUser({...newUser, [e.target.name]: e.target.value})
   }
 
+  // const getDinos = async () =>{
+
+  // }
+  
+
+
   return (
     <div className="App">
       <header>
@@ -37,8 +46,8 @@ function App() {
           <Route path='/' element={ <Home /> } />
           <Route path='/aboutus' element={ <AboutUs /> } />
           <Route path='/attractions' element={ <Attractions />} />
-          {/* <Route path="/dinosaurs" element={ <DinoList dinos={dinos} />} />
-          <Route path="/dinosaurs/:id" element={ <DinoDeets dinos={dinos} />} /> */}
+          <Route path="/dinosaurs" element={ <DinoList dinos={dinos} />} />
+          <Route path="/dinosaurs/:id" element={ <DinoDeets dinos={dinos} />} />
           <Route path='/joinform' element={ <JoinForm 
         newUser={newUser}
         handleChange={handleChange}
