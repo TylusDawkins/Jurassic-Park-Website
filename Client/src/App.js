@@ -37,7 +37,6 @@ function App() {
   
   const getDinos = async() => {
     const dinoList = await axios.get('http://localhost:3001/api/dinos')
-    console.log(dinoList)
     setDinos(dinoList.data)
   }
   useEffect(() =>{
