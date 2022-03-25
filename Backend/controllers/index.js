@@ -3,7 +3,7 @@ const Ride = require('../models/ride');
 const Restaurant = require('../models/restaurant');
 const Ticket = require('../models/ticket');
 const Staff = require('../models/staff');
-// const User = require('../models/user');
+const User = require('../models/user');
 
 const getAllDinos = async (req, res) => {
     try {
@@ -65,17 +65,19 @@ const getAllStaff = async (req, res) => {
 
 
 
-// const createUser = async (req, res) => {
-//     try {
-//         const user = await new User(req.body)
-//         await user.save()
-//         return res.status(201).json({
-//             user,
-//         });
-//     } catch (error) {
-//         return res.status(500).json({ error: error.message })
-//     }
-// }
+const createUser = async (req, res) => {
+    // console.log(find({user}))
+    try {
+        const user = await new User(req.body)
+        await user.save()
+        return res.status(201).json({
+            user,
+        });
+    } catch (error) {
+        return res.status(500).json({ error: error.message })
+    }
+   
+}
 
 module.exports = {
     getAllDinos,
@@ -84,5 +86,5 @@ module.exports = {
     getAllRestaurants,
     getTicketPrices,
     getAllStaff,
-    // createUser
+    createUser
 }
