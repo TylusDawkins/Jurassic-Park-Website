@@ -8,7 +8,7 @@ import DinoDeets from './components/DinoDeets';
 import DinoList from './components/DinoList'
 import AboutUs from './components/AboutUs';
 import Nav from './components/Nav';
-import Axios from 'axios'
+import axios from 'axios'
 
 
 
@@ -30,10 +30,21 @@ function App() {
       setNewUser({...newUser, [e.target.name]: e.target.value})
   }
 
-  // const getDinos = async () =>{
-
-  // }
+  // const res = Axios.get('localhost:3001/api/')
+  // const dinos =  Axios.get('localhost:3001/api/dinos')
+  // console.log(dinos)
+  const [dinos,setDinos] = useState()
   
+  const getDinos = async() => {
+    const dinoList = await axios.get('http://localhost:3001/api/dinos')
+    console.log(dinoList)
+    setDinos(dinoList.data)
+  }
+  useEffect(() =>{
+    getDinos()
+  },[])
+console.log(dinos)
+
 
 
   return (
