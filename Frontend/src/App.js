@@ -8,12 +8,13 @@ import DinoDeets from './components/DinoDeets';
 import DinoList from './components/DinoList'
 import AboutUs from './components/AboutUs';
 import Nav from './components/Nav';
-import Axios from 'axios'
+import axios from 'axios'
 
 
 
 
 function App() {
+  const [dinos, setDinos] =useState([])
   // const [page, setPage] = useState(<Home/>)
   const [newUser, setNewUser] =useState({
       firstName: '',
@@ -21,6 +22,9 @@ function App() {
       email: '',
       age: ''
   })
+  useEffect(() =>{ 
+    getDinos();
+  },[]);
   
   const addUser = (e) => {
       e.preventDefault()
@@ -33,7 +37,11 @@ function App() {
   // const getDinos = async () =>{
 
   // }
-  
+  const getDinos = async () => {
+    const res = await axios.get(`http://localhost:3001/api/dinos`);
+    setDinoList(res.data.dinos)
+    
+  }
 
 
   return (
@@ -46,8 +54,8 @@ function App() {
           <Route path='/' element={ <Home /> } />
           <Route path='/aboutus' element={ <AboutUs /> } />
           <Route path='/attractions' element={ <Attractions />} />
-          <Route path="/dinosaurs" element={ <DinoList dinos={dinos} />} />
-          <Route path="/dinosaurs/:id" element={ <DinoDeets dinos={dinos} />} />
+          {/* <Route path="/dinosaurs" element={ <DinoList dinos={dinos} />} />
+          <Route path="/dinosaurs/:id" element={ <DinoDeets dinos={dinos} />} /> */}
           <Route path='/joinform' element={ <JoinForm 
         newUser={newUser}
         handleChange={handleChange}

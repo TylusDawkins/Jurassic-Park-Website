@@ -66,7 +66,7 @@ const getAllStaff = async (req, res) => {
 
 
 const createUser = async (req, res) => {
-    // console.log(find({user}))
+    
     try {
         const user = await new User(req.body)
         await user.save()
