@@ -30,19 +30,17 @@ function App() {
       setNewUser({...newUser, [e.target.name]: e.target.value})
   }
 
-  // const res = Axios.get('localhost:3001/api/')
-  // const dinos =  Axios.get('localhost:3001/api/dinos')
-  // console.log(dinos)
-  const [dinos,setDinos] = useState()
   
-  const getDinos = async() => {
-    const dinoList = await axios.get('https://jurassic-master.herokuapp.com/api/dinos')
-    setDinos(dinoList.data.dinos)
-  }
-  useEffect(() =>{
-    getDinos()
-  },[])
-console.log(dinos)
+//   const [dinos,setDinos] = useState()
+  
+//   const getDinos = async() => {
+//     const dinoList = await axios.get('https://jurassic-master.herokuapp.com/api/dinos')
+//     setDinos(dinoList.data.dinos)
+//   }
+//   useEffect(() =>{
+//     getDinos()
+//   },[])
+// console.log(dinos)
 
 
 
@@ -56,8 +54,9 @@ console.log(dinos)
           <Route path='/' element={ <Home /> } />
           <Route path='/aboutus' element={ <AboutUs /> } />
           <Route path='/attractions' element={ <Attractions />} />
-          <Route path="/dinosaurs" element={ <DinoList dinos={dinos} />} />
-          <Route path="/dinosaurs/:id" element={ <DinoDeets dinos={dinos} />} />
+          <Route path="/dinosaurs" element={ <DinoList/>} />
+          <Route path="/dinosaurs/:id" element={ <DinoDeets/>} />
+          {/* <Route path="/dinosaurs/:id" element={ <DinoDeets dinos={dinos} />} /> */}
           <Route path='/joinform' element={ <JoinForm 
         newUser={newUser}
         handleChange={handleChange}

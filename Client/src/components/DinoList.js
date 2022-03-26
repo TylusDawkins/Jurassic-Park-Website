@@ -2,14 +2,14 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from 'react'
 import axios from 'axios'
-//routes
 
-const DinoList = (props) => {
+const DinoList = () => {
   let navigate = useNavigate();
   const showDino = (dino) => {
     navigate(`${dino._id}`);
   };
-  const [dinos,setDinos] = useState()
+
+  const [dinos,setDinos] = useState([])
   
   const getDinos = async() => {
     const dinoList = await axios.get('https://jurassic-master.herokuapp.com/api/dinos')
@@ -18,11 +18,11 @@ const DinoList = (props) => {
   useEffect(() =>{
     getDinos()
   },[])
-console.log(dinos)
+
 
   return (
     <div className="dino-grid">
-      {props.dinos.map((dino) => (
+      {dinos.map((dino) => (
         <div className="dino-card" onClick={() => showDino(dino)} key={dino._id}>
           <img style={{ display: "block" }} src={dino.image} alt={dino.name} />
           <h3>{dino.name}</h3>
