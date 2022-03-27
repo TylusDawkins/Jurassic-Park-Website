@@ -4,18 +4,18 @@ import { useParams } from "react-router-dom";
 
 const DinoDeets = (props) => {
   let { id } = useParams();
-
-  const [selectedDino, setDino] = useState("");
+ 
+  const [selectedDino, setDino] = useState({});
 
   useEffect(() => {
-    let selectedDino = props.dinos.find((dino) => dino.id === parseInt(id));
-    setDino(selectedDino);
-  }, [props.dinos, id]);
+    const chosenDino = props.dinos.find((dino) => dino.id_number === id);
+    setDino(chosenDino);
+  }, []);
 
   return selectedDino ? (
     <div className="detail">
       <div className="detail-header">
-        <img src={selectedDino.img} alt={selectedDino.name} />
+        <img src={selectedDino.image} alt={selectedDino.name} />
         <div
           style={{
             minWidth: "30em",

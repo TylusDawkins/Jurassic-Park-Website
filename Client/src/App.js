@@ -7,6 +7,7 @@ import Attractions from './components/Attractions';
 import DinoDeets from './components/DinoDeets';
 import DinoList from './components/DinoList'
 import AboutUs from './components/AboutUs';
+import Restaurants from './components/Restaurants';
 import Nav from './components/Nav';
 import axios from 'axios'
 
@@ -31,15 +32,15 @@ function App() {
   }
 
   
-//   const [dinos,setDinos] = useState()
+  const [dinos,setDinos] = useState()
   
-//   const getDinos = async() => {
-//     const dinoList = await axios.get('https://jurassic-master.herokuapp.com/api/dinos')
-//     setDinos(dinoList.data.dinos)
-//   }
-//   useEffect(() =>{
-//     getDinos()
-//   },[])
+  const getDinos = async() => {
+    const dinoList = await axios.get('https://jurassic-master.herokuapp.com/api/dinos')
+    setDinos(dinoList.data.dinos)
+  }
+  useEffect(() =>{
+    getDinos()
+  },[])
 // console.log(dinos)
 
 
@@ -55,13 +56,14 @@ function App() {
           <Route path='/aboutus' element={ <AboutUs /> } />
           <Route path='/attractions' element={ <Attractions />} />
           <Route path="/dinosaurs" element={ <DinoList/>} />
-          <Route path="/dinosaurs/:id" element={ <DinoDeets/>} />
-          {/* <Route path="/dinosaurs/:id" element={ <DinoDeets dinos={dinos} />} /> */}
+          <Route path="/dinosaurs/:id" element={ <DinoDeets dinos={dinos} getDinos={getDinos} />} />
+          <Route path='/restaurants' element={<Restaurants/>}/>
           <Route path='/joinform' element={ <JoinForm 
         newUser={newUser}
         handleChange={handleChange}
         addUser={addUser}/>} />
         </Routes>
+        
       </main>
     </div>
     
