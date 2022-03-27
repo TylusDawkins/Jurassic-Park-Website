@@ -29,12 +29,12 @@ const Nav = () => {
         <Link className="btn" to="/tickets">
           Tickets
         </Link>
-        <Link className="joinbtn" to="/joinform">
+        <Link className="btn" to="/joinform">
           Join
         </Link>
-        <div className="btn" onClick={() => navigate(-1)}>
+        <a className="btn" onClick={() => navigate(-1)}>
           Back
-        </div>
+        </a>
       </div>
     </nav>
   );

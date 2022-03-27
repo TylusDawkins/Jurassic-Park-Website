@@ -3,7 +3,8 @@
 }
 nav {
   display: flex;
-  background-color: aquamarine;
+  max-width: 100vw;
+  background-color: rgba(62, 100, 248, 0.75);
 }
 
 div {
@@ -26,17 +27,24 @@ div {
 }
 
 .btn {
+  text-decoration: none;
   padding: 8px 20px;
-
   border-radius: 4px;
   outline: none;
   border: none;
   cursor: pointer;
+  color: rgba(235,7,8,1);
+}
+
+.btn:hover {
+  padding: 8px 20px;
+  transition: all 0.3s ease-out;
+  color: rgba(188,5,6,1);
+  transition: 250ms;
 }
 
 .detail,
 .detail-header,
-.listings,
 .dino-card {
   display: flex;
 }
@@ -56,12 +64,12 @@ div {
   padding: 1em;
   width: 18em;
   height: 15em;
-  background-color: rgba(175, 187, 6, 0.699);
+  background-color: rgba(248, 210, 62, 1);
   border-radius: 0.8em;
   margin: 1em;
   justify-content: space-around;
-  box-shadow: 0 0 0.25em rgba(0, 0, 0, 0.527);
-  color: rgb(184, 16, 16);
+  box-shadow: 0 0 0.25em rgba(0, 0, 0, 0.5);
+  color: rgba(235, 7, 8, 1);
   cursor: pointer;
   text-overflow: clip;
 }
@@ -78,7 +86,7 @@ div {
 }
 
 .detail-header {
-  background-color: rgb(23, 28, 46);
+  background-color: rgba(43, 70, 173, 1);
   padding-bottom: 1em;
   padding-right: 1em;
   justify-content: space-between;
