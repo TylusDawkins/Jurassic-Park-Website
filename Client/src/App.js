@@ -8,8 +8,11 @@ import DinoDeets from './components/DinoDeets';
 import DinoList from './components/DinoList'
 import AboutUs from './components/AboutUs';
 import Restaurants from './components/Restaurants';
+import Tickets from './components/Tickets';
+import Rides from './components/Rides';
 import Nav from './components/Nav';
 import axios from 'axios'
+import Staff from './components/Staff';
 
 
 
@@ -53,11 +56,13 @@ function App() {
       <main>
         <Routes>
           <Route path='/' element={ <Home /> } />
-          <Route path='/aboutus' element={ <AboutUs /> } />
+          <Route path='/aboutus' element={ <Staff/> } />
           <Route path='/attractions' element={ <Attractions />} />
           <Route path="/dinosaurs" element={ <DinoList/>} />
           <Route path="/dinosaurs/:id" element={ <DinoDeets dinos={dinos} getDinos={getDinos} />} />
           <Route path='/restaurants' element={<Restaurants/>}/>
+          <Route path='/tickets' element={<Tickets/>}/>
+          <Route path='/rides' element={<Rides/>}/>
           <Route path='/joinform' element={ <JoinForm 
         newUser={newUser}
         handleChange={handleChange}
