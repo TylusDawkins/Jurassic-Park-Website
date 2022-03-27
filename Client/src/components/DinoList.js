@@ -6,7 +6,7 @@ import axios from 'axios'
 const DinoList = () => {
   let navigate = useNavigate();
   const showDino = (dino) => {
-    navigate(`${dino._id}`);
+    navigate(`${dino.id_number}`);
   };
 
   const [dinos,setDinos] = useState([])
@@ -23,7 +23,7 @@ const DinoList = () => {
   return (
     <div className="dino-grid">
       {dinos.map((dino) => (
-        <div className="dino-card" onClick={() => showDino(dino)} key={dino._id}>
+        <div className="dino-card" onClick={() => showDino(dino)} key={dino.id_number}>
           <img style={{ display: "block" }} src={dino.image} alt={dino.name} />
           <h3>{dino.name}</h3>
         </div>

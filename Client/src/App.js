@@ -31,15 +31,15 @@ function App() {
   }
 
   
-//   const [dinos,setDinos] = useState()
+  const [dinos,setDinos] = useState()
   
-//   const getDinos = async() => {
-//     const dinoList = await axios.get('https://jurassic-master.herokuapp.com/api/dinos')
-//     setDinos(dinoList.data.dinos)
-//   }
-//   useEffect(() =>{
-//     getDinos()
-//   },[])
+  const getDinos = async() => {
+    const dinoList = await axios.get('https://jurassic-master.herokuapp.com/api/dinos')
+    setDinos(dinoList.data.dinos)
+  }
+  useEffect(() =>{
+    getDinos()
+  },[])
 // console.log(dinos)
 
 
@@ -55,8 +55,7 @@ function App() {
           <Route path='/aboutus' element={ <AboutUs /> } />
           <Route path='/attractions' element={ <Attractions />} />
           <Route path="/dinosaurs" element={ <DinoList/>} />
-          <Route path="/dinosaurs/:id" element={ <DinoDeets/>} />
-          {/* <Route path="/dinosaurs/:id" element={ <DinoDeets dinos={dinos} />} /> */}
+          <Route path="/dinosaurs/:id" element={ <DinoDeets dinos={dinos} getDinos={getDinos} />} />
           <Route path='/joinform' element={ <JoinForm 
         newUser={newUser}
         handleChange={handleChange}
