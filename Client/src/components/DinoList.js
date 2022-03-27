@@ -14,6 +14,7 @@ const DinoList = () => {
   const getDinos = async() => {
     const dinoList = await axios.get('https://jurassic-master.herokuapp.com/api/dinos')
     setDinos(dinoList.data.dinos)
+    console.log(dinos)
   }
   useEffect(() =>{
     getDinos()

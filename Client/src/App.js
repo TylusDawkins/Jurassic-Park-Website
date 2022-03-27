@@ -7,6 +7,7 @@ import Attractions from './components/Attractions';
 import DinoDeets from './components/DinoDeets';
 import DinoList from './components/DinoList'
 import AboutUs from './components/AboutUs';
+import Restaurants from './components/Restaurants';
 import Nav from './components/Nav';
 import axios from 'axios'
 
@@ -56,11 +57,13 @@ function App() {
           <Route path='/attractions' element={ <Attractions />} />
           <Route path="/dinosaurs" element={ <DinoList/>} />
           <Route path="/dinosaurs/:id" element={ <DinoDeets dinos={dinos} getDinos={getDinos} />} />
+          <Route path='/restaurants' element={<Restaurants/>}/>
           <Route path='/joinform' element={ <JoinForm 
         newUser={newUser}
         handleChange={handleChange}
         addUser={addUser}/>} />
         </Routes>
+        
       </main>
     </div>
     
