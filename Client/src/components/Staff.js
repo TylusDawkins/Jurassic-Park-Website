@@ -14,18 +14,24 @@ const Staff = () => {
     useEffect(() =>{
       getStaff()
     },[])
-    return (
-        <div> 
-            test
-            {staff.map((people) => (
-        <div>
-          <img style={{ display: "block" }} src={people.image} alt={people.name}/>
-          <h3>{people.name}</h3>
-          <h1>{people.title}</h1>
-        </div>
-      ))}
-        </div>
-        )
+    if(staff[0]){
+        return (
+            <div> 
+                test
+                {staff.map((people) => (
+            <div>
+              <img style={{ display: "block" }} src={people.image} alt={people.name}/>
+              <h3>{people.name}</h3>
+              <h1>{people.title}</h1>
+            </div>
+          ))}
+            </div>
+            )
+    } else{
+        return <h1>Loading...</h1>
+    }
+    
+    
 }
 
 export default Staff;

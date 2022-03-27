@@ -14,17 +14,24 @@ const Tickets = () => {
     useEffect(() =>{
       getTickets()
     },[])
+
+    if(tickets[0]){
     return (
         <div> 
             test
             {tickets.map((ticket) => (
         <div>
-          <h3>{ticket.type}</h3>
-          <h1>{ticket.price}</h1>
+          <h3>{ticket.Type}</h3>
+          <h1>{ticket.Price}</h1>
         </div>
       ))}
         </div>
         )
+}
+    else{
+        return(<h3>Loading...</h3>)
+        
+    }
 }
 
 export default Tickets;
