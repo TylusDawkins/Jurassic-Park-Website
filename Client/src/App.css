@@ -11,11 +11,20 @@ nav{
     cursor: pointer;
 }
 #navbar{
-    display: inline;
-    list-style-type: none;
-    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
 }
 .body{
     display: flex;
     justify-content: center;
+}
+
+.btn {
+    padding: 8px 20px;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    cursor: pointer;
 }

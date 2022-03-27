@@ -46,24 +46,3 @@ const JoinForm = (props) => {
 };
 
 export default JoinForm;
-
-
-// const [newUser, setNewUser] =useState({
-//     firstName: '',
-//     lastName: '',
-//     email: '',
-//     age: ''
-// })
-// const addUser = (e) => {
-//     e.preventDefault()
-    
-// }
-// const handleChange = (e) => {
-//     setNewUser({...newUser, [e.target.name]: e.target.value})
-// }
-
-// <JoinForm
-// newUser={newUser}
-// handleChange={handleChange}
-// addUser={addUser}
-// />

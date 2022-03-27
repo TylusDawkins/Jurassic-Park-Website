@@ -12,9 +12,14 @@ const Attractions = (props) => {
                 <p>Meet Real Life Dinos!</p>
             </div>
             <div id="card2" className="card" onClick={props.details}>
-            <Link to='/restaurantsandrides' >Restaurants and Rides</Link>
+            <Link to='/restaurants' >Restaurants and Rides</Link>
                 <p>World Class Attractions!</p>
                 <img src="https://controlroom.jurassicoutpost.com/app/uploads/2016/05/jw3.jpg" alt="Masosaurus eats a shark" className="attractionimg"/>
+            </div>
+            <div id="card3" className="card" onClick={props.details}>
+            <Link to='/rides' >Rides</Link>
+                <p>Exciting Adventures!</p>
+                <img src="" alt="Rides" className="ridesimg"/>
             </div>
         </div>
         )
