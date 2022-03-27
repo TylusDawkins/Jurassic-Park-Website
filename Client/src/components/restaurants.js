@@ -17,7 +17,7 @@ const Restaurants = () => {
     return (
         <div> 
             test
-            {restaurants.map((restaurant) => (
+            {restaurants.data.restaurants.map((restaurant) => (
         <div>
           <img style={{ display: "block" }} src={restaurant.image} alt={restaurant.name}/>
           <h3>{restaurant.name}</h3>
