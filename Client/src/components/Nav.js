@@ -13,29 +13,28 @@ const Nav = () => {
         onClick={() => navigate("/")}
       />
       <h4>Jurassic Park</h4>
-      <div>
-        <Link className="btn" to="/">
-          Home
-        </Link>
-        <Link className="btn" to="/attractions">
-          Attractions
-        </Link>
-        <Link className="btn" to="/aboutus">
-          Our Staff
-        </Link>
-        <Link className="btn" to="/restaurants">
-          Restaurants
-        </Link>
-        <Link className="btn" to="/tickets">
-          Tickets
-        </Link>
-        <Link className="btn" to="/joinform">
-          Join
-        </Link>
-        <a className="btn" onClick={() => navigate(-1)}>
-          Back
-        </a>
-      </div>
+
+      <Link className="btn" to="/">
+        Home
+      </Link>
+      <Link className="btn" to="/attractions">
+        Attractions
+      </Link>
+      <Link className="btn" to="/aboutus">
+        Our Staff
+      </Link>
+      <Link className="btn" to="/restaurants">
+        Restaurants
+      </Link>
+      <Link className="btn" to="/tickets">
+        Tickets
+      </Link>
+      <Link className="btn" to="/joinform">
+        Join
+      </Link>
+      <a className="btn" onClick={() => navigate(-1)}>
+        Back
+      </a>
     </nav>
   );
 };

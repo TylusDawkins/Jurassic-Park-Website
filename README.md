@@ -19,14 +19,20 @@
 - [x] Landing page
     - [x] Banner
     - [x] Nav
-    - [] Footer?
-- [] Dinosaurs
-- [] Restaurants
-- [] Rides
-- [] Key staff
+- [x] Dinosaurs
+    - [] style
+    - [] fix floating text
+- [x] Restaurants
+    - [] style 
+- [x] Rides
+    - [] style
+- [x] Key staff
+    - [] style
 - [x] Newsletter signup
-    - [?] addUser function
-    - [?] handleChange function
+    - [x] addUser function
+    - [x] handleChange function
+    - [] Clear form
+    - [?] redirect after form
 ### ***Back End***
 ####
 [Back End Trello](https://trello.com/b/IqmrVGGb/jurassic-park)    

@@ -1,3 +1,8 @@
+body {
+    display: flex;
+}
+
+
 .main {
   background-color: rgba(40, 204, 40, 0.527);
 }
@@ -50,7 +55,7 @@ div {
 }
 
 .detail,
-.boat-card {
+.dino-card {
   flex-direction: column;
 }
 
@@ -72,6 +77,7 @@ div {
   color: rgba(235, 7, 8, 1);
   cursor: pointer;
   text-overflow: clip;
+  max-width: fit-content;
 }
 
 .dino-card image {
