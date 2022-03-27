@@ -1,30 +1,122 @@
-.main{
-    background-color:rgba(40, 204, 40, 0.527);
+.main {
+  background-color: rgba(40, 204, 40, 0.527);
 }
-nav{
-    display:flex;
-    background-color:aquamarine;
+nav {
+  display: flex;
+  background-color: aquamarine;
 }
-#logo{
-    width:100px;
-    height:100px;
-    cursor: pointer;
+
+div {
+  background-size: cover;
 }
-#navbar{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.2rem;
+#logo {
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
 }
-.body{
-    display: flex;
-    justify-content: center;
+#navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+}
+.body {
+  display: flex;
+  justify-content: center;
 }
 
 .btn {
-    padding: 8px 20px;
-    border-radius: 4px;
-    outline: none;
-    border: none;
-    cursor: pointer;
+  padding: 8px 20px;
+
+  border-radius: 4px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.detail,
+.detail-header,
+.listings,
+.dino-card {
+  display: flex;
+}
+
+.detail,
+.boat-card {
+  flex-direction: column;
+}
+
+.dino-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.dino-card {
+  padding: 1em;
+  width: 18em;
+  height: 15em;
+  background-color: rgba(175, 187, 6, 0.699);
+  border-radius: 0.8em;
+  margin: 1em;
+  justify-content: space-around;
+  box-shadow: 0 0 0.25em rgba(0, 0, 0, 0.527);
+  color: rgb(184, 16, 16);
+  cursor: pointer;
+  text-overflow: clip;
+}
+
+.dino-card image {
+  width: 100%;
+  height: 10em;
+  object-fit: center;
+  box-shadow: inset 0 0 1em rgb(0, 0, 0);
+}
+
+.dino-card:hover {
+  transform: scale(1.01);
+}
+
+.detail-header {
+  background-color: rgb(23, 28, 46);
+  padding-bottom: 1em;
+  padding-right: 1em;
+  justify-content: space-between;
+  color: white;
+  max-width: 100vw;
+}
+
+.detail-header image {
+  width: 40em;
+  height: 20em;
+  object-fit: cover;
+}
+
+.info-wrapper {
+  max-width: 40em;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.detail {
+  min-height: 35em;
+  justify-content: space-between;
+}
+
+form {
+  background-color: black;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 20em;
+  min-height: 10em;
+  margin: 2em auto;
+  border-radius: 0.25em;
+}
+
+form input {
+  display: block;
+  padding: 0.25em;
 }

@@ -20,7 +20,6 @@ const Tickets = () => {
   if (tickets[0]) {
     return (
       <div>
-        test
         {tickets.map((ticket) => (
           <div>
             <h3>{ticket.Type}</h3>

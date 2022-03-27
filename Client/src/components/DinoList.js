@@ -23,8 +23,8 @@ const DinoList = () => {
 
   return (
     <div className="dino-grid">
-      {dinos.map((dino, i) => (
-        <div className="dino-card" onClick={() => showDino(dino, i)} key={dino.i}>
+      {dinos.map((dino) => (
+        <div className="dino-card" onClick={() => showDino(dino)} key={dino.id}>
           <img style={{ display: "block" }} src={dino.image} alt={dino.name} />
           <h3>{dino.name}</h3>
         </div>

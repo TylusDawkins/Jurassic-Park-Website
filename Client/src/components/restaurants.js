@@ -21,7 +21,6 @@ const Restaurants = () => {
   if (restaurants.data) {
     return (
       <div>
-        test
         {restaurants.data.restaurants.map((restaurant) => (
           <div>
             <img
