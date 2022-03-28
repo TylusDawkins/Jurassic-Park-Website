@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 // routes
 
 const DinoDeets = (props) => {
   let { id } = useParams();
+  let navigate = useNavigate();
  
   const [selectedDino, setDino] = useState({});
 
@@ -30,10 +31,13 @@ const DinoDeets = (props) => {
       <div className="info-wrapper">
         <div style={{ display: "flex", justifyContent: "space-between" }}>
           <h3>Details {selectedDino.details}</h3>
-          <h3>whateverelse {selectedDino.whateverelse}</h3>
+          <h3> {selectedDino.whateverelse}</h3>
         </div>
         <p>{selectedDino.description}</p>
       </div>
+      <div className="btn" onClick={() => navigate(-1)}>
+          Back
+        </div>
     </div>
   ) : null;
 };

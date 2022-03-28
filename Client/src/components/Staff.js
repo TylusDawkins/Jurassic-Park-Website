@@ -17,7 +17,6 @@ const Staff = () => {
     if(staff[0]){
         return (
             <div> 
-                test
                 {staff.map((people) => (
             <div>
               <img style={{ display: "block" }} src={people.image} alt={people.name}/>
